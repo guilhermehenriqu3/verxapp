@@ -2,6 +2,7 @@ import {StyleSheet} from 'react-native';
 import Colors from '../../Constants/Colors';
 
 const styles = StyleSheet.create({
+  margin: {marginTop: 20},
   subtitle: {
     fontSize: 18,
     fontWeight: 'bold',
