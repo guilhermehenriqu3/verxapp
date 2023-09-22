@@ -1,5 +1,16 @@
 import {createSlice} from '@reduxjs/toolkit';
 
+interface User {
+  id: number;
+  username: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  gender: string;
+  image: string;
+  token: string;
+}
+
 export const UserSlice = createSlice({
   name: 'userSlice',
   initialState: {},
@@ -8,7 +19,8 @@ export const UserSlice = createSlice({
       return {};
     },
     setUser: (state, action) => {
-      return action.payload;
+      let data: User = action.payload;
+      return data;
     },
   },
 });
