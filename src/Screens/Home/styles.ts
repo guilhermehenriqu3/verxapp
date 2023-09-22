@@ -2,6 +2,8 @@ import {StyleSheet} from 'react-native';
 import Colors from '../../Constants/Colors';
 
 const styles = StyleSheet.create({
+  fw: {fontWeight: 'bold'},
+  dataContainer: {marginBottom: 20, marginLeft: 16},
   margin: {marginTop: 20},
   pictureSize: {height: 50, width: 50},
   whitePictureContainer: {

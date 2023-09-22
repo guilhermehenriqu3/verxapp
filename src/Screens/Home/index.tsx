@@ -17,7 +17,7 @@ import {userData} from '../../Types/userDataType';
 
 import styles from './styles';
 const Login = () => {
-  const [userData, setUserData] = useState<userData>();
+  const [userData, setUserData] = useState<userData>({});
   const dispatch = useDispatch();
   const {fetchUserData, loading} = useUserData();
 
@@ -81,24 +81,8 @@ const Login = () => {
           <>
             <UserData
               testID="userDataTest"
-              data={{
-                firstName: userData.firstName,
-                age: userData.age,
-                gender: userData.gender,
-                email: userData.email,
-              }}
+              data={userData}
               title="Dados Pessoais"
-            />
-
-            <UserData
-              testID="userDataTest"
-              data={{
-                address: userData.address.address,
-                city: userData.address.city,
-                postalCode: userData.address.postalCode,
-                state: userData.address.state,
-              }}
-              title="Endereço"
             />
           </>
         )}
