@@ -10,7 +10,7 @@ const createAxiosInstance = () => {
   const instance = Axios.create(config);
 
   instance.interceptors.request.use((value: AxiosRequestConfig) => {
-    const user: any = store.getState().userReducer;
+    const user: any = store?.getState().userReducer;
 
     if (user.Token) {
       value.headers = {Authorization: 'Bearer ' + user.Token};

@@ -3,13 +3,13 @@ import * as React from 'react';
 
 const Stack = createNativeStackNavigator();
 
-import Login from '../Screens/Login';
+import Home from '../Screens/Home';
 const PrivateStacks = () => {
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
-      initialRouteName="Login">
-      <Stack.Screen name="Login" component={Login} />
+      initialRouteName="Home">
+      <Stack.Screen name="Home" component={Home} />
     </Stack.Navigator>
   );
 };
