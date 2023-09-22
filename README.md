@@ -7,3 +7,7 @@ Instruções para rodar o projeto.
 Gerar artefatos.
 
 - yarn build/buildapk (um vai gerar aab e o outro apk)
+
+Testar de UI da tela de login e home.
+
+- yarn test
