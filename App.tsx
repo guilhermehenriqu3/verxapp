@@ -3,14 +3,12 @@ import Routes from './src/Navigation/Routes';
 import {Provider} from 'react-redux';
 import {store} from './src/Store';
 
-function App(): JSX.Element {
+const App = () => {
   return (
-    <>
-      <Provider store={store}>
-        <Routes />
-      </Provider>
-    </>
+    <Provider store={store}>
+      <Routes />
+    </Provider>
   );
-}
+};
 
 export default App;

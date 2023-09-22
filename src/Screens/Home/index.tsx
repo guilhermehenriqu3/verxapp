@@ -36,9 +36,12 @@ const Login = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>HOME</Text>
+        <Text testID="header" style={styles.headerText}>
+          HOME
+        </Text>
         <Pressable onPress={deslogar} style={styles.logoButton}>
           <Image
+            testID="logo"
             style={{height: 20}}
             resizeMode="contain"
             source={Images.logo}
@@ -46,7 +49,13 @@ const Login = () => {
         </Pressable>
       </View>
 
-      {loading && <ActivityIndicator size="large" style={styles.margin} />}
+      {loading && (
+        <ActivityIndicator
+          testID="loading"
+          size="large"
+          style={styles.margin}
+        />
+      )}
 
       {userData && !loading && (
         <>
@@ -54,6 +63,7 @@ const Login = () => {
           <View style={styles.pictureContainer}>
             <View style={styles.whitePictureContainer}>
               <Image
+                testID="testPicture"
                 style={styles.pictureSize}
                 resizeMode="contain"
                 source={{uri: userData?.image}}
@@ -70,6 +80,7 @@ const Login = () => {
         {userData && !loading && (
           <>
             <UserData
+              testID="userDataTest"
               data={{
                 firstName: userData.firstName,
                 age: userData.age,
@@ -80,6 +91,7 @@ const Login = () => {
             />
 
             <UserData
+              testID="userDataTest"
               data={{
                 address: userData.address.address,
                 city: userData.address.city,
@@ -91,7 +103,7 @@ const Login = () => {
           </>
         )}
       </ScrollView>
-      <Button title="Deslogar" onPress={deslogar} />
+      <Button testID={'leaveButton'} title="Deslogar" onPress={deslogar} />
     </View>
   );
 };

@@ -5,12 +5,13 @@ import styles from './styles';
 interface IUserData {
   title?: string;
   data: Object | any;
+  testID: string;
 }
 
-const UserData = ({title, data}: IUserData) => {
+const UserData = ({title, data, testID}: IUserData) => {
   return (
     <>
-      <View style={styles.container}>
+      <View testID={testID} style={styles.container}>
         <View style={styles.whiteContainer}>
           <Text style={styles.title}>{title}</Text>
 

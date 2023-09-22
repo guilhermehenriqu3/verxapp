@@ -5,12 +5,17 @@ import styles from './styles';
 interface IButton {
   title?: string;
   onPress: () => void;
+  testID?: any;
 }
 
-const Button = ({title, onPress}: IButton) => {
+const Button = ({title, onPress, testID, ...props}: IButton) => {
   return (
     <>
-      <Pressable onPress={onPress} style={styles.button}>
+      <Pressable
+        testID={testID}
+        {...props}
+        onPress={onPress}
+        style={styles.button}>
         <Text style={styles.buttonTitle}>{title}</Text>
       </Pressable>
     </>

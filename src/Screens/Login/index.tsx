@@ -38,7 +38,7 @@ const Login = () => {
         placeholder="****"
       />
 
-      <Button title="LOGIN" onPress={handleLogin} />
+      <Button testID="submit" title="LOGIN" onPress={handleLogin} />
 
       {loading && <ActivityIndicator size="large" style={styles.margin} />}
     </View>
